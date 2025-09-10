@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>SENAPE Dashboard Ejecutivo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Styles: Minimalist, responsive, fast -->
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>SENAPE Dashboard Ejecutivo</h1>
+    <nav>
+      <button id="refreshBtn">Actualizar</button>
+      <select id="periodoSelect">
+        <option value="2025">Gestión 2025</option>
+        <option value="2024">Gestión 2024</option>
+        <option value="trimestre">Trimestre actual</option>
+        <option value="acumulado">Acumulado</option>
+      </select>
+    </nav>
+  </header>
+  <main>
+    <section id="indicadores" class="grid-4">
+      <div class="card">
+        <h2>DEJURBE Cumplimiento</h2>
+        <canvas id="cumplimientoChart"></canvas>
+        <p id="cumplimientoMeta"></p>
+      </div>
+      <div class="card">
+        <h2>Calidad Registros DEJURBE</h2>
+        <canvas id="calidadChart"></canvas>
+        <p id="calidadMeta"></p>
+      </div>
+      <div class="card">
+        <h2>Avance Físico Institucional</h2>
+        <canvas id="fisicoChart"></canvas>
+        <p id="fisicoMeta"></p>
+      </div>
+      <div class="card">
+        <h2>Avance Financiero Institucional</h2>
+        <canvas id="financieroChart"></canvas>
+        <p id="financieroMeta"></p>
+      </div>
+    </section>
+    <section id="eficiencia" class="grid-2">
+      <div class="card">
+        <h2>Eficiencia Ponderada</h2>
+        <canvas id="ponderadaChart"></canvas>
+        <p id="ponderadaEval"></p>
+      </div>
+      <div class="card">
+        <h2>Eficiencia Relativa</h2>
+        <canvas id="relativaChart"></canvas>
+        <p id="relativaEval"></p>
+      </div>
+    </section>
+    <section id="resumen" class="grid-2">
+      <div class="card">
+        <h2>Presupuesto</h2>
+        <div id="presupuestoDatos"></div>
+      </div>
+      <div class="card">
+        <h2>N° Acciones, Operaciones, Tareas</h2>
+        <ul id="accionesLista"></ul>
+      </div>
+    </section>
+    <section id="graficosAvance">
+      <div class="card">
+        <h2>Evolución de Indicadores</h2>
+        <canvas id="evolucionChart"></canvas>
+      </div>
+      <div class="card">
+        <h2>Distribución de Tareas/Operaciones por Área</h2>
+        <canvas id="distribucionChart"></canvas>
+      </div>
+    </section>
+    <section id="tablaDatos">
+      <h2>Datos Detallados (copiar/pegar)</h2>
+      <div id="tablaContainer"></div>
+      <button id="exportBtn">Exportar Excel</button>
+    </section>
+    <section id="comentarios">
+      <h2>Comentarios y Aclaraciones</h2>
+      <textarea id="comentarioInput" placeholder="Agregue comentarios..."></textarea>
+      <button id="guardarComentarioBtn">Guardar</button>
+    </section>
+  </main>
+  <footer>
+    <small>SENAPE &copy; 2025. Cumplimiento Ley SAFCO y DS 0181. Uptime 99.5%.</small>
+  </footer>
+  <script src="scripts/dashboard.js"></script>
+</body>
+</html>
