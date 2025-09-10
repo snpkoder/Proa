@@ -1,0 +1,41 @@
+.card-floating {
+  background: linear-gradient(120deg, #f3f4f6 70%, #e0e7ff 100%);
+  box-shadow: 0 8px 28px rgba(44, 62, 80, 0.13), 0 1.5px 10px rgba(44,62,80,0.12);
+  border-radius: 18px;
+  padding: 1.8rem 1.3rem;
+  margin: 1rem;
+  min-width: 240px;
+  transition: box-shadow 0.2s, transform 0.2s;
+  position: relative;
+  z-index: 2;
+  overflow: visible;
+}
+.card-floating:hover {
+  box-shadow: 0 10px 34px rgba(44,62,80,0.18), 0 2px 12px rgba(44,62,80,0.15);
+  transform: translateY(-2px) scale(1.02);
+}
+.card-header {
+  padding-bottom: .5rem;
+  margin-bottom: .5rem;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+.card-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #153e75;
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+.card-body {
+  font-size: 1rem;
+  color: #374151;
+  padding: 0;
+}
+@media (max-width: 600px) {
+  .card-floating {
+    min-width: 100%;
+    margin: 0.5rem 0;
+    padding: 1rem;
+  }
+}
